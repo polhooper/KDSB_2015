@@ -9,6 +9,5 @@ Polhooper's submission to the Kaggle 2015 Data Science bowl.
 * `ln -s ~/downloads/validate validate`
 * `ln -s ~/downloads/train train`
 * `ln -s ~/downloads/sample_submission_validate.csv sample_submission_validate.csv`
-* `ln -s ~/downloads/validate validate`
 
 **Step 4:** `$ python run.py` 
