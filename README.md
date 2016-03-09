@@ -8,8 +8,7 @@ Some quick notes:
 * We use [luigi](https://pypi.python.org/pypi/luigi) to parallelize training of the diasoltic and systolic networks on the same machine. [Check out luigi tutorials](http://help.mortardata.com/technologies/luigi/first_luigi_script) for guidance on how to start a luigi server and run python scripts built with luigi in mind. We've tried to make this as hands-free as possible here. 
 * Depending on your machine, `segment.py` and `Preprocessing.py` will take over a full day to run together. Be sure to allow some time for your machine to not go to sleep. This is all single-threaded and clumsy right now, but could easily be parallelized. 
 
-Enjoy!
-
+Implementation: 
 **Step 1:** git clone this repo 
 
 **Step 2:** [download the competition data](https://www.kaggle.com/c/second-annual-data-science-bowl) from Kaggle.com, unzip them, and create a `/data` folder within the repo top level directory.   
@@ -22,3 +21,5 @@ Enjoy!
 **Step 4:** Open a separate terminal window and fire up a luigi server. After running `pip install luigi`, one easy way to do this is to clone Spotify's [luigi GitHub repo](https://github.com/spotify/luigi) and run the `luigid` binary executable within that repo, e.g. (on our machine) `$  ~/documents/repos/luigi/bin/luigid`
 
 **Step 5:** `$ python run.py` 
+
+Enjoy!
