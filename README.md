@@ -8,7 +8,8 @@ Some quick notes:
 * We use [luigi](https://pypi.python.org/pypi/luigi) to parallelize training of the diasoltic and systolic networks on the same machine. [Check out luigi tutorials](http://help.mortardata.com/technologies/luigi/first_luigi_script) for guidance on how to start a luigi server and run python scripts built with luigi in mind. We've tried to make this as hands-free as possible here. 
 * Depending on your machine, `segment.py` and `Preprocessing.py` will take over a full day to run together. Be sure to allow some time for your machine to not go to sleep. This is all single-threaded and clumsy right now, but could easily be parallelized. 
 
-Implementation: 
+## Implementation: ##
+
 **Step 1:** git clone this repo 
 
 **Step 2:** [download the competition data](https://www.kaggle.com/c/second-annual-data-science-bowl) from Kaggle.com, unzip them, and create a `/data` folder within the repo top level directory.   
