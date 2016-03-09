@@ -6,7 +6,7 @@ We didn't spend nearly enough time on this competition to become competitive, bu
 Some quick notes: 
 * Getting mxnet setup can be seriously painful. [Check back in with our blog](blog.polhooper.com) in a few days for guidance on that if you're having trouble with setup. 
 * We use [luigi](https://pypi.python.org/pypi/luigi) to parallelize training of the diasoltic and systolic networks on the same machine. [Check out luigi tutorials](http://help.mortardata.com/technologies/luigi/first_luigi_script) for guidance on how to start a luigi server and run python scripts built with luigi in mind. We've tried to make this as hands-free as possible here. 
-* Depending on your machine, `segment.py` and `preprocessing.py` will take over a full day to run together. Be sure to allow some time for your machine to not go to sleep. This is all single-threaded and clumsy right now, but could easily be parallelized. 
+* Depending on your machine, `segment.py` and `Preprocessing.py` will take over a full day to run together. Be sure to allow some time for your machine to not go to sleep. This is all single-threaded and clumsy right now, but could easily be parallelized. 
 
 Enjoy!
 
