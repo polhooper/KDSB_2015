@@ -18,6 +18,7 @@ Some quick notes:
 * `ln -s ~/downloads/validate validate`
 * `ln -s ~/downloads/train train`
 * `ln -s ~/downloads/sample_submission_validate.csv sample_submission_validate.csv`
+* `ln -s ~/downloads/train.csv train.csv`
 
 **Step 4:** Open a separate terminal window and fire up a luigi server. After running `pip install luigi`, one easy way to do this is to clone Spotify's [luigi GitHub repo](https://github.com/spotify/luigi) and run the `luigid` binary executable within that repo, e.g. (on our machine) `$  ~/documents/repos/luigi/bin/luigid`
 
