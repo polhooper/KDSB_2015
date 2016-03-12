@@ -195,7 +195,7 @@ train_masks = train_tmp[1]
 random.seed(10)
 random.shuffle(train_masks)
 
-validate_tmp = get_frames("./output", '501', '700')
+validate_tmp = get_frames("./output", '701', '1140')
 validate_frames = validate_tmp[0]
 validate_frames = validate_tmp[1]
 
