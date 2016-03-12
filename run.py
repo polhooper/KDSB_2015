@@ -4,7 +4,7 @@ cmd = 'Rscript sample_submission_test.R'
 subprocess.call(cmd, shell = True)
 
 print('#------------------------------------------------#\nRunning Fourier segmentation of images...\n#------------------------------------------------#') 
-cmd = 'python segment.py .'
+cmd = 'python segment.py data'
 subprocess.call(cmd, shell = True)
 
 print('#------------------------------------------------#\nPreprocessing images for LeNet pass-in...\n#------------------------------------------------#') 
