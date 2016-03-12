@@ -15,7 +15,7 @@ Some quick notes:
 **Step 2:** [download the competition data](https://www.kaggle.com/c/second-annual-data-science-bowl) from Kaggle.com, unzip them, and create a `/data` folder within the repo top level directory.   
 
 **Step 3:** Create symlinks of competition data files and directories into `/KDSB_2015/data` top level, e.g.: 
-* `ln -s ~/downloads/validate validate`
+* `ln -s ~/downloads/test test`
 * `ln -s ~/downloads/train train`
 * `ln -s ~/downloads/sample_submission_validate.csv sample_submission_validate.csv`
 * `ln -s ~/downloads/train.csv train.csv`
