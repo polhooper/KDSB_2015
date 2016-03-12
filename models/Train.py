@@ -212,7 +212,7 @@ class Runner(luigi.Task):
 		hSystole = doHist(train_csv[:, 1])
 		hDiastole = doHist(train_csv[:, 2])
 
-		fi = csv.reader(open("../data/sample_submission_validate.csv"))
+		fi = csv.reader(open("../data/sample_submission_test.csv"))
 		f = open(self.output().path, "w")
 
 		fo = csv.writer(f, lineterminator='\n')

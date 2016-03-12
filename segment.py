@@ -54,7 +54,7 @@ def log(msg, lvl):
 
 def auto_segment_all_datasets():
     d = sys.argv[1]
-    studies = next(os.walk(os.path.join(d, "train")))[1] + next(os.walk(os.path.join(d, "validate")))[1]
+    studies = next(os.walk(os.path.join(d, "train")))[1] + next(os.walk(os.path.join(d, "test")))[1]
 
     labels = np.loadtxt(os.path.join(d, "train.csv"), delimiter=",",
                         skiprows=1)
@@ -87,7 +87,7 @@ def auto_segment_all_datasets():
         if int(s) <= 500:
             full_path = os.path.join(d, "train", s)
         else:
-            full_path = os.path.join(d, "validate", s)
+            full_path = os.path.join(d, "test", s)
 
         dset = Dataset(full_path, s)
         print "Processing dataset %s..." % dset.name

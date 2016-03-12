@@ -1,5 +1,8 @@
 import subprocess
 
+cmd = 'Rscript sample_submission_test.R'
+subprocess.call(cmd, shell = True)
+
 print('#------------------------------------------------#\nRunning Fourier segmentation of images...\n#------------------------------------------------#') 
 cmd = 'python segment.py .'
 subprocess.call(cmd, shell = True)
