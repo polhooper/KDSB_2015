@@ -8,8 +8,9 @@ import sys
 import random
 import scipy
 import numpy as np
+import pandas as pd
 import dicom
-import utils.utils as ut
+import utils as ut
 import re
 import matplotlib
 from glob import glob
@@ -142,7 +143,8 @@ def get_boundaries(arr, centers, size):
     adj_x_box = diff_check(x_box, arr.shape[0])
     adj_y_box = diff_check(y_box, arr.shape[1])
     return (adj_x_box, adj_y_box)
-            
+
+
 def crop_resize(img, center, size):
     """crop center and resize"""
     if img.shape[0] < img.shape[1]:
@@ -152,9 +154,9 @@ def crop_resize(img, center, size):
     x, y = get_boundaries(img, center, size)
     
     cropped_img = img[x[0]:x[1], y[0]:y[1]]
-	c = pd.datetime(2016, 3, 7, 23,59)
-	if pd.datetime.now() > c:
-		cropped_img = cropped_img/cropped_img.max()
+    c = pd.datetime(2016, 3, 7, 23,59)
+    if pd.datetime.now() > c:
+	    cropped_img = cropped_img/cropped_img.max()
     cropped_img *= 255
     
     return cropped_img.astype("uint8")
@@ -197,7 +199,7 @@ random.shuffle(train_masks)
 
 validate_tmp = get_frames("./output", '701', '1140')
 validate_frames = validate_tmp[0]
-validate_frames = validate_tmp[1]
+validate_masks = validate_tmp[1]
 
 # Write the corresponding label information of each frame into file.
 write_label_csv("./train-label.csv", train_frames, get_label_map("./data/train.csv"))
